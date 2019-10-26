@@ -1,0 +1,11 @@
+import boto3
+
+client = boto3.client('ec2')
+
+snsClient = boto3.client('sns')
+
+# Get all volume ids for creating snapshots
+        VolumeId = vol['VolumeId'],
+        Description = "Boto3"+vol['VolumeId']
+    )
+    snapshotIds.append(snapResp['SnapshotId'])
